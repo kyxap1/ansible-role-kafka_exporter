@@ -1,0 +1,13 @@
+[Unit]
+Description=Node Exporter
+Wants=network-online.target
+After=network-online.target
+
+[Service]
+User={{ kafka_exporter_user }}
+Group={{ kafka_exporter_group }}
+Type=simple
+ExecStart={{ kafka_exporter_install_path }}/kafka_exporter {% for server in kafka_servers %}--kafka.server={{ server }} {% endfor %}
+
+[Install]
+WantedBy=multi-user.target

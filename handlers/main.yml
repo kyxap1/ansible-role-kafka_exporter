@@ -1,0 +1,10 @@
+# vim:ft=ansible:
+---
+
+- name: restart kafka_exporter service
+  systemd:
+    name: kafka_exporter
+    state: restarted
+    daemon_reload: yes
+  when:
+    - kafka_exporter_manage_service
