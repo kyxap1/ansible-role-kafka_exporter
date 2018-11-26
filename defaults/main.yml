@@ -1,6 +1,6 @@
 ---
 
-kafka_exporter_version: 1.0.1
+kafka_exporter_version: 1.2.0
 kafka_exporter_tarball_url: "https://github.com/danielqsj/kafka_exporter/releases/download/v{{ kafka_exporter_version }}/kafka_exporter-{{ kafka_exporter_version }}.linux-amd64.tar.gz"
 kafka_exporter_parent_dir: "/opt/kafka_exporter"
 kafka_exporter_install_path: "/opt/kafka_exporter/kafka_exporter-{{ kafka_exporter_version }}.linux-amd64"
